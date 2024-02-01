@@ -7,4 +7,4 @@ jobs:
       - name: my-step
         run: echo "Hello Worldlast!"
       - name: second-step
-        run: npm create-react-app App
+        run: npx create-react-app App
