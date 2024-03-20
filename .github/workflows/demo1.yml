@@ -1,10 +1,11 @@
 name: hello-world
-"on": push
+on:
+  push:
 jobs:
   my-job:
-    runs-on: ubuntu-latest
+    runs-on: action-runner-image
     steps:
       - name: my-step
         run: echo "Hello Worldlast!"
       - name: second-step
-        run: echo "Hello Worldlas2t!"
+        run: echo "Hello Worldlast2!"
