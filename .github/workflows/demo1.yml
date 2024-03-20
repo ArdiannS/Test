@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   my-job:
-    runs-on: action-runner-image
+    runs-on: ubuntu-latest
     steps:
       - name: my-step
         run: echo "Hello Worldlast!"
