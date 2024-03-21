@@ -1,0 +1,9 @@
+FROM node:alpine3.11
+
+WORKDIR /containerFolder/app
+
+COPY package*.json .
+
+RUN npm install
+
+CMD [ "npm","run","dev" ]
