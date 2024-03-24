@@ -6,7 +6,7 @@ const axios = require("axios");
 const csvFilePath = "Sample-Spreadsheet-100-rows.csv";
 const owner = "ArdiannS";
 const repo = "TradeBridge";
-const username = "argjend02";
+const username = "albin-sh";
 const token = process.env.GITHUB_TOKEN;
 console.log(token);
 // Read data from CSV file
@@ -22,7 +22,7 @@ fs.createReadStream(csvFilePath)
           "Content-Type": "application/json",
         },
       });
-
+      console.log(response);
       if (response.ok) {
         console.log(
           `User ${username} removed from the repository ${owner}/${repo}.`
