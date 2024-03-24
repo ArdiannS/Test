@@ -6,7 +6,7 @@ const axios = require("axios");
 const csvFilePath = "Sample-Spreadsheet-100-rows.csv";
 const owner = "ArdiannS";
 const repo = "CareConnect";
-const username = "albin-sh";
+const username = "argjend02";
 const token = process.env.GITHUB_TOKEN;
 console.log(token);
 // Read data from CSV file
