@@ -20,5 +20,7 @@ jobs:
         run: npm install csv-parser      
 
       - name: Read data from CSV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           node read_csv.js
