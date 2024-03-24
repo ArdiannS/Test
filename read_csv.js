@@ -1,5 +1,6 @@
 const fs = require("fs");
 const csv = require("csv-parser");
+const fetch = require("node-fetch");
 
 // Path to your CSV file
 const csvFilePath = "Sample-Spreadsheet-100-rows.csv";
