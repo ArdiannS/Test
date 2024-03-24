@@ -1,6 +1,6 @@
 const fs = require("fs");
 const csv = require("csv-parser");
-import axios from "axios";
+const axios = require("axios");
 
 // Path to your CSV file
 const csvFilePath = "Sample-Spreadsheet-100-rows.csv";
