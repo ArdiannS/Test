@@ -4,13 +4,16 @@ const axios = require("axios");
 
 // Path to your CSV file
 const csvFilePath = "Sample-Spreadsheet-100-rows.csv";
+const owner = "ArdiannS";
+const repo = "CareConnect";
+const username = "albin-sh";
 const token = process.env.GITHUB_TOKEN;
 console.log(token);
 // Read data from CSV file
 fs.createReadStream(csvFilePath)
   .pipe(csv())
   .on("data", async (row) => {
-    const url = `https://api.github.com/repos/ArdiannS/CareConnect/collaborators/albin-sh`;
+    const url = `https://api.github.com/repos/${owner}/${repo}/collaborators/${username}`;
     try {
       const response = await axios.delete(url, {
         headers: {
