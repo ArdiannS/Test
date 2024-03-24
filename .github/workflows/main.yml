@@ -17,8 +17,9 @@ jobs:
         with:
           node-version: '14'
       - name: Install dependecies
-        run: npm install csv-parser      
-
+        run: npm install csv-parser
+      - name: Install node-fetch
+        run: npm install node-fetch
       - name: Read data from CSV
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
