@@ -21,6 +21,6 @@ jobs:
 
       - name: Read data from CSV
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           node read_csv.js
