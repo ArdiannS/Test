@@ -1,9 +1,11 @@
 name: hello-world
 on:
   push:
+env:
+  NODE_EXTRA_CA_CERTS: /etc/ssl/certs/ca-certeficates.crt
 jobs:
   my-job:
-    runs-on: image
+    runs-on: ubuntu-latest
     steps:
       - name: my-step
         run: echo "Hello Worldlast!"
