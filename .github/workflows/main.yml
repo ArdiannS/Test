@@ -18,8 +18,8 @@ jobs:
           node-version: "14"
       - name: Install dependecies
         run: npm install csv-parser
-      - name: Install node-fetch
-        run: npm install node-fetch
+      - name: Install axios
+        run: npm install axios
       - name: Read data from CSV
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}

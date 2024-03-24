@@ -1,6 +1,6 @@
 const fs = require("fs");
 const csv = require("csv-parser");
-const fetch = import("node-fetch");
+import axios from "axios";
 
 // Path to your CSV file
 const csvFilePath = "Sample-Spreadsheet-100-rows.csv";
@@ -12,10 +12,9 @@ fs.createReadStream(csvFilePath)
   .on("data", async (row) => {
     const url = `https://api.github.com/repos/ArdiannS/CareConnect/collaborators/albin-sh`;
     try {
-      const response = await fetch(url, {
-        method: "DELETE",
+      const response = await axios.delete(url, {
         headers: {
-          Authorization: `token ${token}`,
+          Authorization: `token ${process.env.GITHUB_TOKEN}`,
           Accept: "application/vnd.github.v3+json",
           "Content-Type": "application/json",
         },
