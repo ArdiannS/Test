@@ -1,0 +1,24 @@
+name: Read data from CSV File
+
+on: 
+  schedule:
+    - cron: '0 8 * * *' # Runs every day at 8:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  read-data-from-csv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Install dependecies
+        run: npm install csv-parser      
+
+      - name: Read data from CSV
+        run: |
+          node read_csv.js
