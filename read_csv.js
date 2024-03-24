@@ -5,7 +5,7 @@ const axios = require("axios");
 // Path to your CSV file
 const csvFilePath = "Sample-Spreadsheet-100-rows.csv";
 const owner = "ArdiannS";
-const repo = "CareConnect";
+const repo = "TradeBridge";
 const username = "argjend02";
 const token = process.env.GITHUB_TOKEN;
 console.log(token);
